@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>part 2</title>
+</head>
+<body>
+
+<script>
+    combine(printHello, whoToGreet)
+
+    function combine(one, two) {
+        one();
+        two();
+    }
+
+    function printHello() {
+        console.log("Hello");
+    }
+
+    function whoToGreet() {
+        console.log("World");
+    }
+
+
+    const myFavoriteThings = ["༼ つ ◕_◕ ༽つ", '(╯°□°）╯︵ ┻━┻', '(*/ω＼*)'];
+
+    function printer(something) {
+        console.log(something);
+    }
+
+    //higher order function (HoF) - a function that takes a function as an argument
+    //myFavoriteThings.forEach(printer);
+
+    //lambda
+    //myFavoriteThings.forEach(element => printer(element));
+
+
+    //myFavoriteThings.forEach((element, index, list) => printer(element));
+    //myFavoriteThings.forEach((element, index, list) => printer(index));
+    //myFavoriteThings.forEach((element, index, list) => printer(list));
+
+    myFavoriteThings.forEach(console.log)
+
+    /*
+        (argument)  [name]
+        =>          lambda syntax
+        [...]       function/lambda body
+     */
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functional Programming in JavaScript</title>
+</head>
+<body>
+ body text
+ <div id="greeting"></div>
+<script>
+    console.log("hello mickey mouse");
+    greeting()
+    function greeting(){
+        console.log("Hello World")
+    }
+    const message = "hello world";
+    console.log(message);
+
+    const variableWithFunction = function greetings() {
+        console.log("hello worldsssss");
+    }
+    variableWithFunction();
+
+    let anonymousFunction = function() {
+        console.log("hello worldsssss");
+    }
+    anonymousFunction();
+
+    function returnMeAFunction() {
+        return anonymousFunction();
+    }
+    let returnedFunction = returnMeAFunction();
+
+    console.log(returnedFunction);
+
+
+
+    greetingHTML()
+    function greetingHTML() {
+        let div = document.getElementById('greeting');
+        let h1 = document.createElement('h1');
+        h1.innerHTML = "Hello World"
+        div.appendChild(h1.cloneNode(true));
+    }
+
+</script>
+</body>
+</html>

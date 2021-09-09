@@ -1,1 +1,11 @@
-Task: Create a Main method taht does nothing
+Task 01: Create a Main method that does nothing
+Task 02: Create a method called out that takes a string and prints it
+Task 03: Solve it so it can print 5
+Task 04: Create a class called Systemos and put the two out methods in it
+Task 05: create Systemos.out.println instead
+Task 06: support all primitive data types you can think of
+    int, char, boolean, double, float, long, short, byte,
+
+Task 07: implement word, give it content that think makes sense and allow it to be printed with Systemos
+Task 08: make an array of 5 words and implement a method in Systemos that prints them out
+Task 09: create an ArrayList of several Words and implement a way to print them out with Systemos

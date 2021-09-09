@@ -1,0 +1,11 @@
+// String literal
+"Hello World"
+
+//anonym funktion, lambda
+//function literal
+() -> System.out.println("Hello World")
+
+//method
+public void greetings() {
+    System.out.println("Hello World");
+}

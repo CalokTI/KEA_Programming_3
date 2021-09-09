@@ -1,0 +1,6 @@
+Task 01:
+Task 02: implement a custom move method that returns the string "Swish Swosh" in Animal
+Task 03: implement an activity method that when given a number from 1-6 returns a string of an activity that it does. You can make it repeat certain activities that it does from frequently
+Task 04: Create an infinite loop that calls select activity and prints it out - call it from main " for (;;) " sadface.jpg
+Task 05: Make main instantiate the game from "GameOfOctopus" and allow for a new thread to create an octopus (interfaces ends with able)
+Task 06: Create a zoo / aquarium. It's possible to name threads in Java, give each animal a unique name and say who is doing what, ASCII  animation that move when move is called. Animals can die, change the activity frequency to your liking
