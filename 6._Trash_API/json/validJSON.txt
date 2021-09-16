@@ -1,0 +1,22 @@
+{
+    "trash": [
+        {
+            "name": "Julius",
+            "age": "25+++",
+            "fitInCategory": true
+        },
+        {
+            "name": "Carsten",
+            "age": "young and fit",
+            "fitInCategory": false
+        }
+        ]
+}
+
+
+{
+"key": "value",
+"isABike": true,
+"bikeModels": [{"Scott", "Level": "Hard"},{"Trek", "Level": "Medium"}{"Canyon", "Level": "Easy"}],
+"bikePrice": ["100","200","300"]
+}

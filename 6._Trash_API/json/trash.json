@@ -1,0 +1,14 @@
+{
+  "trash": [
+    {
+      "name": "Julius",
+      "age": "25+++",
+      "fitInCategory": true
+    },
+    {
+      "name": "Carsten",
+      "age": "young and fit",
+      "fitInCategory": false
+    }
+  ]
+}
