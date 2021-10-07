@@ -1,9 +1,6 @@
 package edu.kea.trash.Controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
@@ -57,12 +54,27 @@ public class TrashController {
 
     @GetMapping("deadlysinsno/{id}")
     public String renderDeadlySinsPathVariable(@PathVariable int id){
-        if(id >= 1 && id <= 7){
-            return deadlySins.get(id-1);
+        try {
+            if (id >= 1 && id <= 7) {
+                return deadlySins.get(id - 1);
+            } else {
+                return "Only 7 deadly sins.";
+            }
+        }catch (Exception error){
+            error.printStackTrace();
         }
-        else {
-            return "Only 7 deadly sins.";
-        }
+        return null;
+    }
+
+    @GetMapping("/trash")
+    public String returnTrash(@RequestParam String trash){
+        return trash;
+    }
+
+    @PostMapping("/rubbishbin")
+    public String throwOutRubbish(@RequestBody String rubbish) {
+        System.out.println(rubbish);
+        return "Everything went well";
     }
 
 }

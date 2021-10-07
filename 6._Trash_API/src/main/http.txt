@@ -1,0 +1,29 @@
+GET /pokemon/1 HTTP/1.0
+
+[headers]
+
+[body]
+
+______________
+
+POST /pokemon HTTP/1.0
+
+[headers]
+
+[body]
+
+
+
+
+HTTP Methods
+
+GET
+    Retrieves resources - no body
+POST
+    creates new resources
+PUT
+    replace entire resource
+PATCH
+    updates part of the resource
+DELETE
+    deletes resources
