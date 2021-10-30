@@ -1,10 +1,12 @@
 package edu.kea.paintings.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Table(name="artists")  //sets table name for DB
 @Entity                 //necessary for hibernate, marks the class as a model
@@ -38,5 +40,9 @@ public class Artist {
     @JoinColumn(name = "gallery_id")
     @Nullable
     private Gallery gallery;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "artists", fetch = FetchType.LAZY)
+    private List<Painting> paintings;
 
 }

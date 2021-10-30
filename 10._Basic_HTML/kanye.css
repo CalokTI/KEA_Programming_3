@@ -1,0 +1,48 @@
+.website-header {
+    text-align: center;
+}
+
+.btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.2em;
+}
+
+.reaction-btn {
+    height: 3em;
+    font-size: 2em;
+    background-color: darkorange;
+    border: solid lawngreen;
+    border-radius: 1em;
+    margin: 0.2em;
+}
+
+.list-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.2em;
+}
+
+#list-laugh {
+    background-color: lawngreen;
+    min-height: 20vh;
+    min-width: 25vw;
+    max-width: 30vw;
+}
+
+#list-wtf {
+    background-color: darkkhaki;
+    min-height: 20vh;
+    min-width: 25vw;
+    max-width: 30vw;
+}
+
+#list-horny {
+    color: antiquewhite;
+    background-color: rebeccapurple;
+    min-height: 20vh;
+    min-width: 25vw;
+    max-width: 30vw;
+}

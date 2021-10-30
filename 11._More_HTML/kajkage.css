@@ -1,0 +1,7 @@
+table{
+    border: solid black;
+}
+thead{
+    background-color: darkgrey;
+    font-size: 1.1em;
+}

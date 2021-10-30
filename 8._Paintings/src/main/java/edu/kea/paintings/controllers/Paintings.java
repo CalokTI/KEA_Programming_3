@@ -1,6 +1,13 @@
 package edu.kea.paintings.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import edu.kea.paintings.DTO.ArtistDTO;
+import edu.kea.paintings.exceptions.ResourceNotFoundError;
+import edu.kea.paintings.models.Artist;
 import edu.kea.paintings.models.Painting;
+import edu.kea.paintings.repositories.ArtistRepository;
 import edu.kea.paintings.repositories.PaintingRepository;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +21,9 @@ public class Paintings {
     @Autowired
     PaintingRepository paintings;
 
+    @Autowired
+    ArtistRepository artists;
+
     @GetMapping("/paintings")
     public Iterable<Painting> getPaintings() {
         return paintings.findAll();
@@ -21,7 +31,7 @@ public class Paintings {
 
     @GetMapping("/paintings/{id}")
     public Painting getPaitingsByID(@PathVariable Long id) {
-        return paintings.findById(id).get();
+        return paintings.findById(id).orElseThrow(() -> new ResourceNotFoundError("Unlucky choice"));
     }
 
     @GetMapping("/paintings/timeline")
@@ -36,8 +46,19 @@ public class Paintings {
     }
 
     @PostMapping("/paintings")
-    public Painting addPaiting(@RequestBody Painting painting) {
-        return paintings.save(painting);
+    public Painting addPaiting(@RequestBody String body) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+
+        Painting paintingToCreate = mapper.readValue(body, Painting.class);
+
+        Iterable<Long> artistsIds = mapper.readValue(body, ArtistDTO.class).artistsIds;
+
+        List<Artist> foundArtists = artists.findAllById(artistsIds);
+
+        paintingToCreate.setArtists(foundArtists);
+
+        return paintings.save(paintingToCreate);
     }
 
     @PutMapping("/paintings/{id}")

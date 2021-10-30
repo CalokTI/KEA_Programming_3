@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="lib/HTMLEscape.js" defer></script>
+    <script src="rigormortis.js" defer></script>
+    <link rel="stylesheet" href="rigormortis.css">
+</head>
+<body>
+
+<select id="character-status">
+    <option selected value="character">All</option>
+    <option value="Alive">Alive</option>
+    <option value="Dead">Dead</option>
+    <option value="unknown">Unknown</option>
+</select>
+
+<select id="character-species">
+    <option selected value="character">All</option>
+    <option value="Human">Human</option>
+    <option value="Alien">Alien</option>
+    <option value="other">Other</option>
+</select>
+
+<input type="text" id="search-field" placeholder="search by name">
+
+<section id="character-card" class="parent"></section>
+
+</body>
+</html>
