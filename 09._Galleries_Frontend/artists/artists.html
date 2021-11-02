@@ -5,10 +5,32 @@
     <title>Title</title>
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="artists.css">
+    <link rel="icon" href="../resources/images/kajerfox.ico" type="image/x-icon"/>
     <script src="../lib/HTMLEscape.js" defer></script>
-    <script src="artists.js"></script>
+    <script src="artists.js" defer></script>
 </head>
 <body>
+<nav>
+    <a href="../frontpage/index.html"><img src="../resources/images/kekw.png" id="logo"
+                                           alt="kekw, link to frontpage"></a>
+    <a href="../artists/artists.html">Artists</a>
+    <a href="../galleries/galleries.html">Galleries</a>
+    <a href="../paintings/paintings.html">Paintings</a>
+</nav>
+<h2>welcome to artists</h2>
+
+
+<input id="create-artist-name" type="text" placeholder="Name">
+<input id="create-artist-age" type="number" placeholder="Age" min="0" max="150">
+<input id="create-artist-image" type="text" placeholder="Image src">
+<input id="create-artist-primary-style" type="text" placeholder="Primary Style">
+<select id="create-artist-gender">
+    <option>MALE</option>
+    <option>FEMALE</option>
+    <option>OTHER</option>
+</select>
+<button id="create-artist-button">Submit</button>
+<div id="artists-list"></div>
 
 </body>
 </html>
