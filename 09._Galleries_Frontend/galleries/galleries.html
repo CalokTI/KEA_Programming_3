@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="galleries.css">
     <link rel="icon" href="../resources/images/kajerfox.ico" type="image/x-icon" />
     <script src="../lib/HTMLEscape.js" defer></script>
-    <script src="galleries.js"></script>
+    <script src="../global.js" defer></script>
+    <script src="galleries.js" defer></script>
+    <script src="galleriesCreateForm.js" defer></script>
 </head>
 <body>
 <nav>
@@ -17,5 +19,21 @@
     <a href="../paintings/paintings.html">Paintings</a>
 </nav>
 <h2>welcome to galleries</h2>
+
+<button id="add-new-gallery">➕</button>
+<section id="gallery-form"></section>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Owner</th>
+        <th>Square Feet</th>
+        <th>Delete</th>
+    </thead>
+    <tbody id="gallery-tbody"></tbody>
+</table>
+
+
 </body>
 </html>

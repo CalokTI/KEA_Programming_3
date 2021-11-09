@@ -41,7 +41,7 @@ function createCard(character) {
 
 
     characterArticle.innerHTML = `
-        <div class="characterCardImage"><img src="${escapeHTML(character.image)}"</div>
+        <div class="characterCardImage"><img src="${escapeHTML(character.image)}"></div>
         <div class="characterCardInfo">
         <span class="characterCardName">${escapeHTML(character.name)}</span>
         <hr>

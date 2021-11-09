@@ -1,12 +1,12 @@
-fetch("http://localhost:8080/artists")
+fetch(baseURL + "/artists")
     .then(response => response.json())
     .then(result => {
-        result.map(artistArticle)
+        result.map(artistCard)
     })
 
 const artistContainer = document.getElementById('artists-list');
 
-function artistArticle(artist) {
+function artistCard(artist) {
     const artistDivElement = document.createElement('div');
 
     let artistImage = artist.image;
@@ -56,7 +56,7 @@ createArtistButton.addEventListener('click', () => {
     })
         .then(response => {
             if (response.status === 200){
-                artistArticle(artist);
+                artistCard(artist);
             }else{
                 console.log("Artist not created.", response.status);
             }
