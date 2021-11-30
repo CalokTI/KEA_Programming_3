@@ -31,9 +31,6 @@ function newGallery() {
     const galleryOwner = document.getElementById('create-gallery-owner').value;
     const gallerySqrFeet = document.getElementById('create-gallery-squarefeet').value;
 
-    //todo REMOVE AFTER TEST
-    console.log(galleryName, galleryLocation, galleryOwner, gallerySqrFeet)
-
     //Create js object
     const newGallery = {
         name:galleryName,
@@ -44,8 +41,6 @@ function newGallery() {
 
     //add gallery to db
     createGallery(newGallery);
-
-    hideForm();
 }
 
 
@@ -65,6 +60,7 @@ function createGallery(newGallery){
     })
         .then(response => response.json())
         .then(gallery => {
-            createGalleryCard(gallery)
+            createGalleryTableRow(gallery);
+            hideForm();
         })
 }
